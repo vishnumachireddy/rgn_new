@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #059669;
+  /* Emerald 600 */
+  --color-primary-light: #10b981;
+  /* Emerald 500 */
+  --color-primary-dark: #064e3b;
+  /* Emerald 900 */
+  --color-accent: #f59e0b;
+  /* Amber 500 */
+  --color-bg-dark: #022c22;
+  /* Very dark emerald */
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary hover:bg-primary-light text-white rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-primary/50 transform hover:-translate-y-1;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-transparent border-2 border-white/30 hover:border-white text-white rounded-full font-bold transition-all duration-300 backdrop-blur-sm;
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl;
+  }
+}
